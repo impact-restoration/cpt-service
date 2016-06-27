@@ -22,6 +22,7 @@ abstract class IR_CPT {
 	public $p2p_archive = false;
 	public $supports = array( 'title', 'editor' );
 	public $labels = array();
+	public $args = array();
 
 	function __construct() {
 
@@ -44,25 +45,29 @@ abstract class IR_CPT {
 	function create_cpt() {
 
 		$labels = wp_parse_args( $this->labels, array(
-			'name'               => $this->label_plural,
-			'singular_name'      => $this->label_singular,
-			'menu_name'          => $this->label_plural,
-			'name_admin_bar'     => $this->label_singular,
-			'add_new'            => "Add New",
-			'add_new_item'       => "Add New $this->label_singular",
-			'new_item'           => "New $this->label_singular",
-			'edit_item'          => "Edit $this->label_singular",
-			'view_item'          => "View $this->label_singular",
-			'all_items'          => "All $this->label_plural",
-			'search_items'       => "Search $this->label_plural",
-			'parent_item_colon'  => "Parent $this->label_plural:",
-			'not_found'          => "No $this->label_plural found.",
-			'not_found_in_trash' => "No $this->label_plural found in Trash.",
+			'name'                  => $this->label_plural,
+			'singular_name'         => $this->label_singular,
+			'menu_name'             => $this->label_plural,
+			'name_admin_bar'        => $this->label_singular,
+			'add_new'               => "Add New",
+			'add_new_item'          => "Add New $this->label_singular",
+			'new_item'              => "New $this->label_singular",
+			'edit_item'             => "Edit $this->label_singular",
+			'view_item'             => "View $this->label_singular",
+			'all_items'             => "All $this->label_plural",
+			'search_items'          => "Search $this->label_plural",
+			'parent_item_colon'     => "Parent $this->label_plural:",
+			'not_found'             => "No $this->label_plural found.",
+			'not_found_in_trash'    => "No $this->label_plural found in Trash.",
+			'featured_image'        => 'Featured Image.',
+			'set_featured_image'    => 'Set featured image.',
+			'remove_featured_image' => 'Remove featured image.',
+			'use_featured_image'    => 'Use as featured image.',
 		) );
 
 		$supports = $this->supports;
 
-		$args = array(
+		$args = wp_parse_args( $this->args, array(
 			'labels'             => $labels,
 			'public'             => true,
 			'publicly_queryable' => true,
@@ -75,7 +80,7 @@ abstract class IR_CPT {
 			'hierarchical'       => false,
 			'menu_position'      => null,
 			'supports'           => $supports,
-		);
+		));
 
 		register_post_type( $this->post_type, $args );
 	}
