@@ -6,7 +6,7 @@
  * Author: Real Big Marketing
  * Author URI: http://realbigmarketing.com
  * GitHub Plugin URI: https://github.com/impact-restoration/custom-post-types
- * GitHub Branch: master
+ * GitHub Branch: develop
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
