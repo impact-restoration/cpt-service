@@ -2,7 +2,7 @@
 /**
  * CPT Framework.
  *
- * @since      {{VERSION}}
+ * @since      1.0.0
  *
  * @package    IR_CPTS
  * @subpackage IR_CPTS/core

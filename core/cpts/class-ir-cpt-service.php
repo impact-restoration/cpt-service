@@ -2,7 +2,7 @@
 /**
  * Creates and manages the Service CPT.
  *
- * @since      {{VERSION}}
+ * @since      1.0.0
  *
  * @package    IR_CPTS
  * @subpackage IR_CPTS/core
@@ -27,7 +27,7 @@ class IR_CPT_Service extends IR_CPT {
 	/**
 	 * IR_CPT_Service constructor.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 */
 	function __construct() {
 
@@ -39,7 +39,7 @@ class IR_CPT_Service extends IR_CPT {
 	/**
 	 * Adds metaboxes.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 * @access private
 	 */
 	function add_meta_boxes() {
@@ -78,7 +78,7 @@ class IR_CPT_Service extends IR_CPT {
 	/**
 	 * Metabox for icon.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 */
 	static public function mb_icon() {
 
@@ -97,7 +97,7 @@ class IR_CPT_Service extends IR_CPT {
 	/**
 	 * Metabox for color.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 */
 	static public function mb_color() {
 
@@ -107,7 +107,7 @@ class IR_CPT_Service extends IR_CPT {
 	/**
 	 * Metabox for services.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 */
 	static public function mb_services() {
 
@@ -120,7 +120,7 @@ class IR_CPT_Service extends IR_CPT {
 	/**
 	 * Metabox for jobs.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 */
 	static public function mb_jobs() {
 

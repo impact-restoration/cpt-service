@@ -2,9 +2,11 @@
 /**
  * Plugin Name: Impact Restoration Custom Post Types
  * Description: Creates the custom post types for Impact Restoration
- * Version: {{VERSION}}
+ * Version: 1.0.0
  * Author: Real Big Marketing
  * Author URI: http://realbigmarketing.com
+ * GitHub Plugin URI: https://github.com/impact-restoration/custom-post-types
+ * GitHub Branch: master
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define plugin constants
-define( 'IR_CPTS_VERSION', '{{VERSION}}' );
+define( 'IR_CPTS_VERSION', '1.0.0' );
 define( 'IR_CPTS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'IR_CPTS_URL', plugins_url( '', __FILE__ ) );
 
@@ -21,7 +23,7 @@ define( 'IR_CPTS_URL', plugins_url( '', __FILE__ ) );
  *
  * Initiates the plugin.
  *
- * @since   {{VERSION}}
+ * @since   1.0.0
  *
  * @package IR_CPTS
  */
@@ -30,7 +32,7 @@ class IR_CPTS {
 	/**
 	 * Custom Post Types.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 *
 	 * @var array
 	 */
@@ -39,7 +41,7 @@ class IR_CPTS {
 	/**
 	 * Post to Post relationships.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 *
 	 * @var IR_CPTS_P2P
 	 */
@@ -54,7 +56,7 @@ class IR_CPTS {
 	/**
 	 * Returns the *Singleton* instance of this class.
 	 *
-	 * @since     {{VERSION}}
+	 * @since     1.0.0
 	 *
 	 * @staticvar Singleton $instance The *Singleton* instances of this class.
 	 *
@@ -74,7 +76,7 @@ class IR_CPTS {
 	/**
 	 * Initializes the plugin.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 */
 	protected function __construct() {
 
@@ -84,7 +86,7 @@ class IR_CPTS {
 	/**
 	 * Requires necessary base files.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 */
 	public function require_necessities() {
 
@@ -92,10 +94,12 @@ class IR_CPTS {
 		require_once __DIR__ . '/core/class-ir-cpts-p2p.php';
 
 		require_once __DIR__ . '/core/cpts/class-ir-cpt-service.php';
+		require_once __DIR__ . '/core/cpts/class-ir-cpt-testimonial.php';
 
 		$this->p2ps = new IR_CPTS_P2P();
 
 		$this->cpts['service'] = new IR_CPT_Service();
+		$this->cpts['testimonial'] = new IR_CPT_Testimonial();
 	}
 }
 

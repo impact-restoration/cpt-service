@@ -6,14 +6,14 @@ defined( 'ABSPATH' ) || die();
  *
  * Tests custom post types initialization.
  *
- * @since {{VERSION}}
+ * @since 1.0.0
  */
 class Tests_CPT_Init extends WP_UnitTestCase {
 
 	/**
 	 * Makes sure cpts loaded.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 */
 	function test_cpts_loaded() {
 

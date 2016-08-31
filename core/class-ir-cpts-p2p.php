@@ -2,7 +2,7 @@
 /**
  * Post to Post relationships.
  *
- * @since      {{VERSION}}
+ * @since      1.0.0
  *
  * @package    IR_CPTS
  * @subpackage IR_CPTS/core
@@ -17,7 +17,7 @@ class IR_CPTS_P2P {
 	/**
 	 * All P2P relationships.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 *
 	 * @var string
 	 */
@@ -26,7 +26,7 @@ class IR_CPTS_P2P {
 	/**
 	 * IR_CPTS_P2P constructor.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 */
 	function __construct() {
 
@@ -45,7 +45,7 @@ class IR_CPTS_P2P {
 			/**
 			 * Gets all p2p relationships and allows filtering.
 			 *
-			 * @since {{VERSION}}
+			 * @since 1.0.0
 			 *
 			 * @hooked ME10_CPT_Chapter->p2p 10
 			 */
@@ -57,7 +57,7 @@ class IR_CPTS_P2P {
 	/**
 	 * Adds metaboxes for all p2ps.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 * @access private
 	 */
 	function add_p2p_meta_boxes() {
@@ -87,7 +87,7 @@ class IR_CPTS_P2P {
 	/**
 	 * The metabox for establishing p2ps.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 * @access private
 	 */
 	function p2p_metabox() {
@@ -167,7 +167,7 @@ class IR_CPTS_P2P {
 	/**
 	 * Saves all p2ps for this post.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 * @access private
 	 *
 	 * @param int $post_ID The post ID being saved.
@@ -222,7 +222,7 @@ class IR_CPTS_P2P {
 	/**
 	 * Deletes p2ps for this post
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 * @access private
 	 *
 	 * @param int $post_ID The post ID being deleted.
